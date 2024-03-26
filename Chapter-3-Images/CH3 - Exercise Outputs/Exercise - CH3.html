@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!--Web Attributes-->
+  
+  <meta charset="UTF-8"> <!--Automated Scaling, note: This line of codes were referenced outside of lesson-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body> <!---Images to display. Note if image src is missing it will display alternate text-->
+  <div class="container"> 
+    <div class="image left">
+      <h2>Sketch Circle</h2> <!--1st image-->
+      <img src="FA3 - Circle.jpg" alt="Image failed to load"
+      height="100" width="200"> <!--Attribute of image-->
+      <p>Description of Image 1</p> <!--paragraph and copyright of each img group-->
+      <small>&copy; BSU-2024 Topic of sketches</small>
+    </div>
+    <div class="image right">
+      <h2>Sketch Square</h2> <!--2nd image-->
+      <img src="FA3 - Square.jpg" alt="Image failed to load"
+      height="100" width="200"> <!--Attribute of image-->
+      <p>Description of Image 2</p> 
+      <small>&copy; BSU-2024 Topic of sketches</small>
+    </div>
+    <div class="image bottom">
+      <h2>Sketch Triangle</h2> <!--3rd image-->
+      <img src="FA3 - Triangle.jpg" alt="Image failed to load"
+      height="100" width="200"> <!--Attributes of image-->
+      <p>Created in 3/4/2024 <br> Fastest Drawn Triangle in Microsoft Paint</p>
+      <small>&copy; BSU-2024 Topic of sketches</small>
+    </div>
+  </div>
+</body>
+</html>
+
+<!--For CSS-->
+
+<style>
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+  }
+  
+  .image:hover img {
+    filter: blur(100%);
+  }
+  
+  .left, .right {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .left img, .right img {
+    max-width: 45%;
+  }
+  
+  .bottom {
+    align-self: center;
+  }
+  
+  .bottom img {
+    max-width: 70%;
+  }
+  

@@ -1,0 +1,40 @@
+<div>
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+.image:hover img {
+  filter: blur(100%);
+}
+
+.left, .right {
+  display: flex;
+  justify-content: center;
+}
+
+.left img, .right img {
+  max-width: 45%;
+}
+
+.bottom {
+  align-self: center;
+}
+
+.bottom img {
+  max-width: 70%;
+}
+</div>
